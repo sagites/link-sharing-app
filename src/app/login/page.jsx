@@ -33,17 +33,17 @@ const Form = () => {
   };
 
   return (
-    <div className="ustify-center place-items-center min-h-screen">
-      <div>
+    <div className="justify-center bg-white p-8 md:bg-lightGrey md:place-items-center min-h-screen">
+      <div className="pb-9 p-0 m-0 border-0">
         <img
           src="/Assets/images/logo-devlinks-large.svg"
           alt="Logo"
-          className=""
+          className="p-0 m-0 border-0"
         />
       </div>
-      <div className="bg-white p-5 rounded-lg">
-        <div>
-          <p className="text-Heading-M text-dark">Login</p>
+      <div className="bg-white md:p-8 rounded-lg md:w-[400px]">
+        <div className="pt-2 pb-6 md:pb-4">
+          <p className="text-2xl pb-3 md:text-Heading-M text-dark">Login</p>
           <p className="text-Body-M text-grey">
             Add your details to get back into the app
           </p>
@@ -68,6 +68,7 @@ const Form = () => {
               value={user.email}
               onChange={handleChange}
               errorMessage={error}
+              className=""
             />
           </div>
           <div>
@@ -94,17 +95,15 @@ const Form = () => {
             label="Login"
             onClick={handleSubmit}
             type="submit"
-            className="w-auto"
+            className="w-auto mt-3 mb-6"
           />
         </form>
-        <div>
-          <p className="text-Body-S">
-            Don't have an account?
-            <Link className="text-purple" href="./signup">
-              {" "}
-              Create account
-            </Link>
-          </p>
+        <div className="text-center md:flex">
+          <p className="text-Body-M text-grey">Don't have an account?</p>
+          <Link className="text-purple" href="./signup">
+            {" "}
+            Create account
+          </Link>
         </div>
       </div>
     </div>
