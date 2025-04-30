@@ -5,7 +5,7 @@ const ButtonPrimary = ({ label, onClick, type = "button", className}) => {
     <button
       type={type}
       onClick={onClick}
-      className={`px-4 py-2 button text-Body-M active:bg-lightPurple disabled:bg-lighterPurple text-white bg-purple cursor-pointer rounded-xl ${className}`}
+      className={`px-4 py-2 button text-Body-M active:bg-lightPurple disabled:bg-lighterPurple text-white bg-purple cursor-pointer rounded-xl w- ${className}`}
     >
       {label}
     </button>

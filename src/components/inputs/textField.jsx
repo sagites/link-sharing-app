@@ -29,7 +29,7 @@ const InputField = ({
   `;
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full text-dark">
       {label && (
         <label
           className="block mb-1 text-sm font-medium text-gray-700"
