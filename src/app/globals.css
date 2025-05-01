@@ -73,3 +73,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Hide scrollbar for Webkit, Firefox, and IE */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
