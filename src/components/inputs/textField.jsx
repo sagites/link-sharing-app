@@ -64,9 +64,7 @@ const InputField = ({
       )}
 
       {icon && (
-        <div className="absolute top-1/2 left-3 -translate-y-1/2 pointer-events-none">
-          {icon}
-        </div>
+        <img className="absolute top-1/2 left-3 -translate-y-1/2 pointer-events-none" src={icon}/>
       )}
     </div>
   );

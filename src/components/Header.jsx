@@ -56,7 +56,7 @@ const Header = () => {
           </div>
         </div> */}
 
-        <div className="text-grey flex gap-6">
+        <div className="text-grey flex gap-2 md:gap-6">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -84,7 +84,9 @@ const Header = () => {
 
         <div>
           <ButtonSecondary
-            classNameButton=""
+            classNameButton="s"
+            classNameImage="block sm:hidden"
+            classNameLabel="hidden sm:block"
             label="Preview"
             imageSrc="Assets/images/icon-preview-header.svg"
           />
