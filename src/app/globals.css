@@ -17,7 +17,7 @@
   /* Color definitions */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-purple: #635dff;
+  --color-purple: #633cff;
   --color-lightPurple: #beadff;
   --color-lighterPurple: #efebff;
   --color-dark: #333333;
@@ -27,10 +27,10 @@
   --color-red: #ff3939;
 
   /* Font families */
-  --font-family: var(--font-sans);
+  /* --font-family: var(--font-sans); */
   --font-sans: "Instrument Sans Regular", sans-serif;
   --font-sans-bold: "Instrument Sans Bold", sans-serif;
-  --font-mono: var(--font-geist-mono);
+  /* --font-mono: var(--font-geist-mono); */
 
   /* Font sizes */
   --text-Heading-M: 32px;
