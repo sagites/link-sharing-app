@@ -120,7 +120,7 @@ const Signup = () => {
             label="Create new Account"
             onClick={handleSubmit}
             type="submit"
-            className="mb-6 w-auto"
+            className="mb-6 w-full"
           />
         </form>
         <div className="text-center md:justify-center md:flex">
