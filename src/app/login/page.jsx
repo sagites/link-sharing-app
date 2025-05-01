@@ -95,7 +95,7 @@ const Form = () => {
             label="Login"
             onClick={handleSubmit}
             type="submit"
-            className="w-auto mt-3 mb-6"
+            className="w-full mt-3 mb-6 "
           />
         </form>
         <div className="text-center md:flex">
