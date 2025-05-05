@@ -32,24 +32,24 @@ export default function CustomSelect({ value, onChange }) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between border border-gray-300 rounded px-4 py-2 shadow-sm bg-white"
+        className="w-full flex items-center text-grey justify-between border border-grey rounded px-4 py-2 bg-white"
       >
         <div className="flex items-center gap-2">
-          {selected?.icon}
+          {selected ? <img src={selected.icon} alt={selected.name} className="w-5 h-5" /> : null}
           <span>{selected?.name || "Select a platform"}</span>
         </div>
         <span>▼</span>
       </button>
 
       {open && (
-        <div className="absolute z-10 mt-1 text-grey w-full px-3 bg-white  border-grey rounded shadow-lg max-h-60 overflow-y-scroll scrollbar-hide">
+        <div className="absolute z-10 mt-1 text-grey w-full px-3 bg-white border border-gray-300 rounded shadow-lg max-h-60 overflow-y-scroll scrollbar-hide">
           {platforms.map((platform) => (
             <div
               key={platform.name}
               onClick={() => handleSelect(platform)}
-              className="flex items-center gap-2 px-4 py-2 border-grey border-b hover:bg-gray-100 cursor-pointer"
+              className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              <img src={platform.icon} alt="" />
+              <img src={platform.icon} alt={platform.name} className="w-5 h-5" />
               <span>{platform.name}</span>
             </div>
           ))}

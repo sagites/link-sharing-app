@@ -1,8 +1,22 @@
+'use client';
 import ButtonPrimary from "@/components/buttons/buttonPrimary";
 import ButtonSecondary from "@/components/buttons/buttonSecondary";
-import React from "react";
+import React, { useState } from "react";
+import LinkComponent from "@/components/inputs/LinkComponent";
 
 const Links = () => {
+  const [links, setLinks] = useState([]);
+
+  const addLink = () => {
+    setLinks([...links, {}]);
+  };
+
+  const removeLink = (indexToRemove) => {
+    setLinks((prevLinks) =>
+      prevLinks.filter((_, index) => index !== indexToRemove)
+    );
+  };
+
   return (
     <div>
       <div className="grid lg:grid-cols-5 gap-4 pt-3">
@@ -29,7 +43,17 @@ const Links = () => {
               classNameButton="w-full"
               classNameLabel=""
               label="+ Add new link"
+              onClick={addLink}
             />
+          </div>
+          <div className="mt-4 space-y-4">
+            {links.map((_, index) => (
+              <LinkComponent
+                key={index}
+                index={index}
+                onRemove={() => removeLink(index)}
+              />
+            ))}
           </div>
           <div className="bg-lightGrey rounded-lg  py-3 mb-">
             <div className="items-center justify-center flex flex-col p-10">
@@ -47,7 +71,7 @@ const Links = () => {
           </div>
           <div className="p-3 flex justify-end">
             <ButtonPrimary className="flex " label="Save" />
-            <hr className="bg-orange-500"/>
+            <hr className="bg-orange-500" />
           </div>
         </div>
       </div>
