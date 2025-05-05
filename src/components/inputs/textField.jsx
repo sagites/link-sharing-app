@@ -15,7 +15,7 @@ const InputField = ({
   const [isFocused, setIsFocused] = useState(false);
 
   const inputClasses = `
-    pl-10 pr-4 py-2 border rounded-md w-full
+    pl-10 pr-4 py-2 border rounded-md w-full bg-white
     ${
       isFocused
         ? "border-purple shadow-purple shadow-sm"
